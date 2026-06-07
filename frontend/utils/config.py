@@ -30,16 +30,16 @@ except KeyError as e:
     CLOUD_RUN_EJECUTIVO_URL = "http://localhost:8080/ejecutivo"
 
 COLORS = {
-    "bg": "#08161C",
-    "surface": "#10242C",
-    "surface_2": "#16313B",
-    "surface_3": "#1D3E49",
-    "primary": "#00C7B7",
-    "accent_blue": "#0099E5",
-    "success": "#27AE60",
-    "warning": "#D6A23D",
-    "danger": "#D95C68",
-    "text": "#F7FBFC",
-    "muted": "#D3E0E5",
-    "border": "rgba(179, 205, 214, 0.24)",
+    "bg": "#F4F8F8",
+    "surface": "#FFFFFF",
+    "surface_2": "#EDF4F5",
+    "surface_3": "#E3EEF0",
+    "primary": "#00AFA3",
+    "accent_blue": "#1493D1",
+    "success": "#2E9E5B",
+    "warning": "#C69236",
+    "danger": "#C95A67",
+    "text": "#12313A",
+    "muted": "#5F7A83",
+    "border": "rgba(18, 49, 58, 0.12)",
 }
