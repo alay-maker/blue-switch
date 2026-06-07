@@ -70,7 +70,6 @@ def _crear_figura_radar(df_plot: pd.DataFrame, hora_ahora) -> go.Figure:
         yref="paper",
         text="PASADO | FUTURO",
         showarrow=False,
-        # Usamos la variable global de texto para mantener contraste
         font=dict(size=12, color=COLORS["text"]),
     )
 
@@ -206,6 +205,7 @@ def mostrar_panel_vivo() -> None:
     st.divider()
     st.markdown("### Visión del orquestador")
 
+    # 1. Instanciamos el placeholder vacío
     contenedor_grafica = st.empty()
 
     if st.session_state.historial_ejecutado or st.session_state.plan_futuro:
@@ -219,6 +219,7 @@ def mostrar_panel_vivo() -> None:
 
         fig_radar = _crear_figura_radar(df_plot, hora_ahora)
         
+        # 2. Inyectamos la gráfica en el contenedor (evitando el tema de Streamlit)
         contenedor_grafica.plotly_chart(fig_radar, use_container_width=True, theme=None)
     else:
         contenedor_grafica.info(
