@@ -99,8 +99,8 @@ def _crear_figura_radar(df_plot: pd.DataFrame, hora_ahora) -> go.Figure:
             y=1.02,
             xanchor="right",
             x=1,
-            font=dict(color="#F4F8FA", size=12),
-            title_font=dict(color="#F4F8FA"),
+            font=dict(color="#4F6470", size=12),
+            title_font=dict(color="#4F6470"),
             bgcolor="rgba(0,0,0,0)",
         ),
         hoverlabel=dict(
