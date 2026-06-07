@@ -70,7 +70,8 @@ def _crear_figura_radar(df_plot: pd.DataFrame, hora_ahora) -> go.Figure:
         yref="paper",
         text="PASADO | FUTURO",
         showarrow=False,
-        font=dict(size=12, color="#F4F8FA"),
+        # Usamos la variable global de texto para mantener contraste
+        font=dict(size=12, color=COLORS["text"]),
     )
 
     fig_radar.update_layout(
@@ -79,19 +80,19 @@ def _crear_figura_radar(df_plot: pd.DataFrame, hora_ahora) -> go.Figure:
         margin=dict(l=0, r=0, t=34, b=0),
         plot_bgcolor="rgba(0,0,0,0)",
         paper_bgcolor="rgba(0,0,0,0)",
-        font=dict(color="#F4F8FA", family="Inter, Segoe UI, sans-serif"),
+        font=dict(color=COLORS["text"], family="Inter, Segoe UI, sans-serif"),
         xaxis=dict(
             title=None,
             showgrid=False,
             zeroline=False,
-            tickfont=dict(color="#C3D0D5"),
-            title_font=dict(color="#F4F8FA"),
+            tickfont=dict(color=COLORS["muted"]),
+            title_font=dict(color=COLORS["text"]),
         ),
         yaxis=dict(
             title="Potencia asignada (kW)",
-            gridcolor="rgba(196, 209, 214, 0.22)",
-            tickfont=dict(color="#C3D0D5"),
-            title_font=dict(color="#F4F8FA"),
+            gridcolor=COLORS["border"],
+            tickfont=dict(color=COLORS["muted"]),
+            title_font=dict(color=COLORS["text"]),
         ),
         legend=dict(
             orientation="h",
@@ -99,14 +100,14 @@ def _crear_figura_radar(df_plot: pd.DataFrame, hora_ahora) -> go.Figure:
             y=1.02,
             xanchor="right",
             x=1,
-            font=dict(color="#4F6470", size=12),
-            title_font=dict(color="#4F6470"),
+            font=dict(color=COLORS["muted"], size=12),
+            title_font=dict(color=COLORS["muted"]),
             bgcolor="rgba(0,0,0,0)",
         ),
         hoverlabel=dict(
-            bgcolor="#16303A",
-            bordercolor="rgba(196, 209, 214, 0.22)",
-            font=dict(color="#F4F8FA"),
+            bgcolor=COLORS["surface"],
+            bordercolor=COLORS["border"],
+            font=dict(color=COLORS["text"]),
         ),
     )
 
@@ -217,7 +218,8 @@ def mostrar_panel_vivo() -> None:
         hora_ahora = df_plot.iloc[indice_ahora]["time"]
 
         fig_radar = _crear_figura_radar(df_plot, hora_ahora)
-        contenedor_grafica.plotly_chart(fig_radar, use_container_width=True)
+        
+        contenedor_grafica.plotly_chart(fig_radar, use_container_width=True, theme=None)
     else:
         contenedor_grafica.info(
             "Aún no hay ticks procesados. Activa Auto-Pilot o ejecuta el siguiente tick para iniciar el radar."
