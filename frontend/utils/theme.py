@@ -228,4 +228,130 @@ def apply_theme() -> None:
             border-radius: 12px;
         }
 
-        
+        .stSelectbox label,
+        .stMultiSelect label,
+        .stTextInput label,
+        .stNumberInput label,
+        .stTextArea label,
+        .stSlider label,
+        .stRadio label,
+        .stCheckbox label,
+        .stToggle label {
+            color: var(--bs-text) !important;
+        }
+
+        .stSlider [data-baseweb="slider"] > div > div {
+            background: var(--bs-primary);
+        }
+
+        .stSlider [data-baseweb="slider"] [role="slider"] {
+            background: #F7FBFC !important;
+            border: 2px solid var(--bs-primary) !important;
+            box-shadow: 0 0 0 3px rgba(0, 199, 183, 0.18);
+        }
+
+        .stSlider [data-baseweb="slider"] [data-testid="stTickBarMin"],
+        .stSlider [data-baseweb="slider"] [data-testid="stTickBarMax"],
+        .stSlider [data-baseweb="slider"] div[aria-hidden="true"] {
+            color: var(--bs-text) !important;
+            opacity: 0.95 !important;
+        }
+
+        .stSlider p {
+            color: var(--bs-text) !important;
+        }
+
+        [data-testid="stToggle"] label {
+            color: var(--bs-text) !important;
+            font-weight: 600;
+        }
+
+        [data-testid="stToggle"] [data-baseweb="checkbox"] > div {
+            background-color: rgba(211, 224, 229, 0.24) !important;
+            border: 1px solid rgba(211, 224, 229, 0.34) !important;
+        }
+
+        [data-testid="stToggle"] input:checked + div,
+        [data-testid="stToggle"] [aria-checked="true"] {
+            background-color: var(--bs-warning) !important;
+            border-color: rgba(255, 226, 163, 0.30) !important;
+        }
+
+        [data-testid="stToggle"] [data-baseweb="checkbox"] div div {
+            background: #061115 !important;
+        }
+
+        [data-testid="stSpinner"] {
+            border-radius: 14px;
+            border: 1px solid var(--bs-border);
+            background: rgba(22, 49, 59, 0.90) !important;
+            color: var(--bs-text) !important;
+        }
+
+        .stSpinner > div {
+            background: transparent !important;
+        }
+
+        .stPlotlyChart,
+        .stPlotlyChart > div,
+        .stPlotlyChart iframe,
+        .js-plotly-plot,
+        .plot-container,
+        .plotly,
+        .main-svg {
+            opacity: 1 !important;
+            filter: none !important;
+        }
+
+        .stPlotlyChart {
+            background: linear-gradient(180deg, rgba(19, 46, 56, 0.96), rgba(13, 31, 38, 0.98));
+            border: 1px solid var(--bs-border);
+            border-radius: 18px;
+            padding: 0.4rem 0.4rem 0.1rem 0.4rem;
+            position: relative;
+            isolation: isolate;
+        }
+
+        .stPlotlyChart::before,
+        .stPlotlyChart::after {
+            display: none !important;
+            content: none !important;
+        }
+
+        div[data-testid="stEmpty"] {
+            background: transparent !important;
+        }
+
+        [data-testid="stAlert"] {
+            border-radius: 14px;
+            border: 1px solid var(--bs-border);
+            background: rgba(22, 49, 59, 0.78);
+        }
+
+        [data-testid="stDataFrame"] {
+            border: 1px solid var(--bs-border);
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        hr {
+            border-color: var(--bs-border);
+        }
+
+        [data-testid="stStaleNode"],
+        [data-stale="true"],
+        .st-emotion-cache-1cvow4s {
+            opacity: 1 !important;
+            transition: none !important;
+            filter: none !important;
+        }
+
+        .stPlotlyChart text,
+        .stPlotlyChart tspan {
+            fill: #F7FBFC !important;
+            color: #F7FBFC !important;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
