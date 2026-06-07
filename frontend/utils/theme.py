@@ -149,17 +149,30 @@ def apply_theme() -> None:
         .stButton > button,
         .stDownloadButton > button {
             background: linear-gradient(180deg, #00AFA3 0%, #008E84 100%);
-            color: #FFFFFF;
+            color: #FFFFFF !important;
+            -webkit-text-fill-color: #FFFFFF !important;
             border: none;
             border-radius: 12px;
             font-weight: 700;
             box-shadow: 0 6px 18px rgba(0, 143, 132, 0.18);
+            text-shadow: none !important;
+        }
+
+        .stButton > button *,
+        .stDownloadButton > button * {
+            color: #FFFFFF !important;
+            fill: #FFFFFF !important;
+            stroke: #FFFFFF !important;
+            -webkit-text-fill-color: #FFFFFF !important;
+            opacity: 1 !important;
+            text-shadow: none !important;
         }
 
         .stButton > button:hover,
         .stDownloadButton > button:hover {
             background: linear-gradient(180deg, #14BDB1 0%, #00978E 100%);
-            color: #FFFFFF;
+            color: #FFFFFF !important;
+            -webkit-text-fill-color: #FFFFFF !important;
         }
 
         .stSelectbox > div > div,
