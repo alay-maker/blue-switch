@@ -1,0 +1,7 @@
+{
+    "ambient_temperature": 0.7679,
+    "inercia_termica_ext_3h": 0.1887,
+    "it_load_kw": 0.0388,
+    "delta_temp_1h": 0.0024,
+    "relative_humidity": 0.0022
+}
