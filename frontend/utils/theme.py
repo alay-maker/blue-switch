@@ -212,6 +212,12 @@ def apply_theme() -> None:
         hr {
             border-color: var(--bs-border);
         }
+
+        [data-testid="stStaleNode"], [data-stale="true"], .st-emotion-cache-1cvow4s {
+            opacity: 1 !important;
+            transition: none !important;
+            filter: none !important;
+        }
         </style>
         """,
         unsafe_allow_html=True,
