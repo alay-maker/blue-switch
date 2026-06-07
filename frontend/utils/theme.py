@@ -209,14 +209,6 @@ def apply_theme() -> None:
             background: #FFFFFF;
         }
 
-        .stPlotlyChart {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(237, 244, 245, 0.98));
-            border: 1px solid var(--bs-border);
-            border-radius: 18px;
-            padding: 0.4rem 0.4rem 0.1rem 0.4rem;
-            box-shadow: 0 8px 24px rgba(18, 49, 58, 0.06);
-        }
-
         hr {
             border-color: var(--bs-border);
         }
