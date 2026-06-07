@@ -2,31 +2,31 @@ import streamlit as st
 
 
 def apply_theme() -> None:
-    """Inyecta una capa visual sobria y legible sin alterar la lógica existente."""
+    """Inyecta una capa visual sobria sin alterar la lógica existente."""
     st.markdown(
         """
         <style>
         :root {
-            --bs-bg: #08161C;
-            --bs-surface: #10242C;
-            --bs-surface-2: #16313B;
-            --bs-surface-3: #1D3E49;
-            --bs-primary: #00C7B7;
-            --bs-blue: #0099E5;
-            --bs-success: #27AE60;
-            --bs-warning: #D6A23D;
-            --bs-danger: #D95C68;
-            --bs-text: #F7FBFC;
-            --bs-muted: #D3E0E5;
-            --bs-border: rgba(179, 205, 214, 0.24);
-            --bs-button-text: #061115;
+            --bs-bg: #F4F8F8;
+            --bs-surface: #FFFFFF;
+            --bs-surface-2: #EDF4F5;
+            --bs-surface-3: #E3EEF0;
+            --bs-primary: #00AFA3;
+            --bs-blue: #1493D1;
+            --bs-success: #2E9E5B;
+            --bs-warning: #C69236;
+            --bs-danger: #C95A67;
+            --bs-text: #12313A;
+            --bs-muted: #5F7A83;
+            --bs-border: rgba(18, 49, 58, 0.12);
+            --bs-button-text: #FFFFFF;
         }
 
         .stApp {
             background:
-                radial-gradient(circle at top right, rgba(0, 199, 183, 0.10), transparent 26%),
-                radial-gradient(circle at left center, rgba(0, 153, 229, 0.08), transparent 22%),
-                linear-gradient(180deg, #08161C 0%, #0D1F26 100%);
+                radial-gradient(circle at top right, rgba(0, 175, 163, 0.10), transparent 24%),
+                radial-gradient(circle at left top, rgba(20, 147, 209, 0.07), transparent 22%),
+                linear-gradient(180deg, #F4F8F8 0%, #EEF5F6 100%);
             color: var(--bs-text);
         }
 
@@ -35,11 +35,12 @@ def apply_theme() -> None:
         }
 
         [data-testid="stHeader"] {
-            background: rgba(8, 22, 28, 0.78);
+            background: rgba(244, 248, 248, 0.88);
+            backdrop-filter: blur(6px);
         }
 
         [data-testid="stSidebar"] {
-            background: linear-gradient(180deg, #0E2027 0%, #112730 100%);
+            background: linear-gradient(180deg, #EEF5F6 0%, #E8F1F3 100%);
             border-right: 1px solid var(--bs-border);
         }
 
@@ -98,9 +99,10 @@ def apply_theme() -> None:
             gap: 0.8rem;
             padding: 0.85rem 0.9rem;
             border: 1px solid var(--bs-border);
-            background: rgba(22, 49, 59, 0.82);
+            background: rgba(255, 255, 255, 0.92);
             border-radius: 14px;
             margin-bottom: 0.65rem;
+            box-shadow: 0 6px 18px rgba(18, 49, 58, 0.06);
         }
 
         .bs-status-dot {
@@ -127,11 +129,12 @@ def apply_theme() -> None:
             border: 1px solid var(--bs-border);
             font-size: 0.78rem;
             font-weight: 600;
-            background: rgba(22, 49, 59, 0.62);
+            background: rgba(237, 244, 245, 0.95);
         }
 
         .bs-pill.ok {
-            color: #DDF7E8;
+            color: #2E9E5B;
+            background: rgba(46, 158, 91, 0.10);
         }
 
         .bs-pill.muted {
@@ -139,11 +142,12 @@ def apply_theme() -> None:
         }
 
         [data-testid="stMetric"] {
-            background: linear-gradient(180deg, rgba(22, 49, 59, 0.94), rgba(16, 36, 44, 0.96));
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(237, 244, 245, 0.98));
             border: 1px solid var(--bs-border);
             border-radius: 16px;
             padding: 0.75rem 0.85rem;
             min-height: 130px;
+            box-shadow: 0 8px 24px rgba(18, 49, 58, 0.06);
         }
 
         [data-testid="stMetricLabel"] {
@@ -169,14 +173,14 @@ def apply_theme() -> None:
         div[data-testid="stButton"] > button,
         div[data-testid="stDownloadButton"] > button,
         button[kind="primary"] {
-            background: linear-gradient(180deg, #D6A23D 0%, #BE8D2E 100%) !important;
+            background: linear-gradient(180deg, #C69236 0%, #B07F2E 100%) !important;
             color: var(--bs-button-text) !important;
             -webkit-text-fill-color: var(--bs-button-text) !important;
-            border: 1px solid rgba(255, 226, 163, 0.30) !important;
+            border: 1px solid rgba(176, 127, 46, 0.18) !important;
             border-radius: 12px !important;
             font-weight: 800 !important;
             text-shadow: none !important;
-            box-shadow: 0 6px 18px rgba(190, 141, 46, 0.24) !important;
+            box-shadow: 0 6px 18px rgba(176, 127, 46, 0.18) !important;
         }
 
         .stButton > button *,
@@ -197,10 +201,10 @@ def apply_theme() -> None:
         div[data-testid="stButton"] > button:hover,
         div[data-testid="stDownloadButton"] > button:hover,
         button[kind="primary"]:hover {
-            background: linear-gradient(180deg, #E0AD4A 0%, #C69331 100%) !important;
+            background: linear-gradient(180deg, #D29D3F 0%, #BA8730 100%) !important;
             color: var(--bs-button-text) !important;
             -webkit-text-fill-color: var(--bs-button-text) !important;
-            box-shadow: 0 8px 22px rgba(198, 147, 49, 0.30) !important;
+            box-shadow: 0 8px 22px rgba(186, 135, 48, 0.22) !important;
             transform: translateY(-1px);
         }
 
@@ -222,7 +226,7 @@ def apply_theme() -> None:
         .stTextInput > div > div > input,
         .stNumberInput input,
         .stTextArea textarea {
-            background: rgba(22, 49, 59, 0.82);
+            background: rgba(255, 255, 255, 0.96);
             color: var(--bs-text);
             border: 1px solid var(--bs-border);
             border-radius: 12px;
@@ -245,9 +249,9 @@ def apply_theme() -> None:
         }
 
         .stSlider [data-baseweb="slider"] [role="slider"] {
-            background: #F7FBFC !important;
+            background: #FFFFFF !important;
             border: 2px solid var(--bs-primary) !important;
-            box-shadow: 0 0 0 3px rgba(0, 199, 183, 0.18);
+            box-shadow: 0 0 0 3px rgba(0, 175, 163, 0.14);
         }
 
         .stSlider [data-baseweb="slider"] [data-testid="stTickBarMin"],
@@ -267,24 +271,25 @@ def apply_theme() -> None:
         }
 
         [data-testid="stToggle"] [data-baseweb="checkbox"] > div {
-            background-color: rgba(211, 224, 229, 0.24) !important;
-            border: 1px solid rgba(211, 224, 229, 0.34) !important;
+            background-color: rgba(95, 122, 131, 0.16) !important;
+            border: 1px solid rgba(95, 122, 131, 0.22) !important;
         }
 
         [data-testid="stToggle"] input:checked + div,
         [data-testid="stToggle"] [aria-checked="true"] {
             background-color: var(--bs-warning) !important;
-            border-color: rgba(255, 226, 163, 0.30) !important;
+            border-color: rgba(176, 127, 46, 0.24) !important;
         }
 
         [data-testid="stToggle"] [data-baseweb="checkbox"] div div {
-            background: #061115 !important;
+            background: #FFFFFF !important;
         }
 
+        /* Spinner y overlays más discretos */
         [data-testid="stSpinner"] {
             border-radius: 14px;
             border: 1px solid var(--bs-border);
-            background: rgba(22, 49, 59, 0.90) !important;
+            background: rgba(255, 255, 255, 0.92) !important;
             color: var(--bs-text) !important;
         }
 
@@ -292,6 +297,7 @@ def apply_theme() -> None:
             background: transparent !important;
         }
 
+        /* Evita el lavado visual del chart durante reruns */
         .stPlotlyChart,
         .stPlotlyChart > div,
         .stPlotlyChart iframe,
@@ -304,12 +310,13 @@ def apply_theme() -> None:
         }
 
         .stPlotlyChart {
-            background: linear-gradient(180deg, rgba(19, 46, 56, 0.96), rgba(13, 31, 38, 0.98));
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(237, 244, 245, 0.98));
             border: 1px solid var(--bs-border);
             border-radius: 18px;
             padding: 0.4rem 0.4rem 0.1rem 0.4rem;
             position: relative;
             isolation: isolate;
+            box-shadow: 0 8px 24px rgba(18, 49, 58, 0.06);
         }
 
         .stPlotlyChart::before,
@@ -325,19 +332,22 @@ def apply_theme() -> None:
         [data-testid="stAlert"] {
             border-radius: 14px;
             border: 1px solid var(--bs-border);
-            background: rgba(22, 49, 59, 0.78);
+            background: rgba(255, 255, 255, 0.94);
+            color: var(--bs-text);
         }
 
         [data-testid="stDataFrame"] {
             border: 1px solid var(--bs-border);
             border-radius: 14px;
             overflow: hidden;
+            background: #FFFFFF;
         }
 
         hr {
             border-color: var(--bs-border);
         }
 
+        /* Evitar opacidad durante el Auto-Pilot (stale state de Streamlit) */
         [data-testid="stStaleNode"],
         [data-stale="true"],
         .st-emotion-cache-1cvow4s {
@@ -346,10 +356,23 @@ def apply_theme() -> None:
             filter: none !important;
         }
 
+        /* Refuerzo extra para que Plotly no se vea lavado durante el rerun */
+        .stPlotlyChart,
+        .stPlotlyChart > div,
+        .js-plotly-plot,
+        .plot-container,
+        .plotly,
+        .main-svg {
+            opacity: 1 !important;
+            filter: none !important;
+            transition: none !important;
+        }
+
+        /* Leyenda y texto SVG del gráfico siempre claros/legibles sobre fondo claro */
         .stPlotlyChart text,
         .stPlotlyChart tspan {
-            fill: #F7FBFC !important;
-            color: #F7FBFC !important;
+            fill: #12313A !important;
+            color: #12313A !important;
         }
         </style>
         """,
