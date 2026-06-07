@@ -7,31 +7,35 @@ def apply_theme() -> None:
         """
         <style>
         :root {
-            --bs-bg: #07141A;
-            --bs-surface: #0D1B22;
-            --bs-surface-2: #102730;
-            --bs-surface-3: #14343E;
+            --bs-bg: #F4F8F8;
+            --bs-surface: #FFFFFF;
+            --bs-surface-2: #EDF4F5;
+            --bs-surface-3: #E3EEF0;
             --bs-primary: #00AFA3;
-            --bs-blue: #2C6E9F;
-            --bs-success: #8A9A5B;
-            --bs-warning: #B88746;
-            --bs-danger: #9E4350;
-            --bs-text: #E8F0F2;
-            --bs-muted: #92A7AF;
-            --bs-border: rgba(154, 169, 176, 0.18);
+            --bs-blue: #1493D1;
+            --bs-success: #2E9E5B;
+            --bs-warning: #C69236;
+            --bs-danger: #C95A67;
+            --bs-text: #12313A;
+            --bs-muted: #5F7A83;
+            --bs-border: rgba(18, 49, 58, 0.12);
         }
 
         .stApp {
-            background: radial-gradient(circle at top right, rgba(0,175,163,0.12), transparent 22%), linear-gradient(180deg, #07141A 0%, #08171D 100%);
+            background:
+                radial-gradient(circle at top right, rgba(0, 175, 163, 0.10), transparent 24%),
+                radial-gradient(circle at left top, rgba(20, 147, 209, 0.07), transparent 22%),
+                linear-gradient(180deg, #F4F8F8 0%, #EEF5F6 100%);
             color: var(--bs-text);
         }
 
         [data-testid="stHeader"] {
-            background: rgba(7,20,26,0.72);
+            background: rgba(244, 248, 248, 0.88);
+            backdrop-filter: blur(6px);
         }
 
         [data-testid="stSidebar"] {
-            background: linear-gradient(180deg, #0A171D 0%, #0C1A21 100%);
+            background: linear-gradient(180deg, #EEF5F6 0%, #E8F1F3 100%);
             border-right: 1px solid var(--bs-border);
         }
 
@@ -78,9 +82,10 @@ def apply_theme() -> None:
             gap: 0.8rem;
             padding: 0.85rem 0.9rem;
             border: 1px solid var(--bs-border);
-            background: rgba(16,39,48,0.72);
+            background: rgba(255, 255, 255, 0.92);
             border-radius: 14px;
             margin-bottom: 0.65rem;
+            box-shadow: 0 6px 18px rgba(18, 49, 58, 0.06);
         }
 
         .bs-status-dot {
@@ -107,11 +112,11 @@ def apply_theme() -> None:
             border: 1px solid var(--bs-border);
             font-size: 0.78rem;
             font-weight: 600;
-            background: rgba(16,39,48,0.55);
+            background: rgba(237, 244, 245, 0.95);
         }
 
         .bs-pill.ok {
-            color: #D8E4D1;
+            color: #2E9E5B;
         }
 
         .bs-pill.muted {
@@ -119,11 +124,12 @@ def apply_theme() -> None:
         }
 
         [data-testid="stMetric"] {
-            background: linear-gradient(180deg, rgba(16,39,48,0.88), rgba(13,27,34,0.88));
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(237, 244, 245, 0.98));
             border: 1px solid var(--bs-border);
             border-radius: 16px;
             padding: 0.75rem 0.85rem;
             min-height: 130px;
+            box-shadow: 0 8px 24px rgba(18, 49, 58, 0.06);
         }
 
         [data-testid="stMetricLabel"] {
@@ -147,7 +153,7 @@ def apply_theme() -> None:
             border: none;
             border-radius: 12px;
             font-weight: 700;
-            box-shadow: 0 6px 18px rgba(0, 143, 132, 0.20);
+            box-shadow: 0 6px 18px rgba(0, 143, 132, 0.18);
         }
 
         .stButton > button:hover,
@@ -161,7 +167,7 @@ def apply_theme() -> None:
         .stTextInput > div > div > input,
         .stNumberInput input,
         .stTextArea textarea {
-            background: rgba(16,39,48,0.7);
+            background: rgba(255, 255, 255, 0.96);
             color: var(--bs-text);
             border: 1px solid var(--bs-border);
             border-radius: 12px;
@@ -180,20 +186,22 @@ def apply_theme() -> None:
         [data-testid="stAlert"] {
             border-radius: 14px;
             border: 1px solid var(--bs-border);
-            background: rgba(16,39,48,0.68);
+            background: rgba(255, 255, 255, 0.94);
         }
 
         [data-testid="stDataFrame"] {
             border: 1px solid var(--bs-border);
             border-radius: 14px;
             overflow: hidden;
+            background: #FFFFFF;
         }
 
         .stPlotlyChart {
-            background: linear-gradient(180deg, rgba(16,39,48,0.82), rgba(13,27,34,0.82));
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(237, 244, 245, 0.98));
             border: 1px solid var(--bs-border);
             border-radius: 18px;
             padding: 0.4rem 0.4rem 0.1rem 0.4rem;
+            box-shadow: 0 8px 24px rgba(18, 49, 58, 0.06);
         }
 
         hr {
