@@ -7,25 +7,26 @@ def apply_theme() -> None:
         """
         <style>
         :root {
-            --bs-bg: #0B1820;
-            --bs-surface: #13262F;
-            --bs-surface-2: #18323D;
-            --bs-surface-3: #21424F;
-            --bs-primary: #2C8C95;
-            --bs-blue: #4B8FC2;
-            --bs-success: #92B468;
-            --bs-warning: #D9A24F;
-            --bs-danger: #C95A67;
-            --bs-text: #F4F8FA;
-            --bs-muted: #C3D0D5;
-            --bs-border: rgba(196, 209, 214, 0.22);
-            --bs-button-text: #081218;
+            --bs-bg: #08161C;
+            --bs-surface: #10242C;
+            --bs-surface-2: #16313B;
+            --bs-surface-3: #1D3E49;
+            --bs-primary: #00C7B7;
+            --bs-blue: #0099E5;
+            --bs-success: #27AE60;
+            --bs-warning: #D6A23D;
+            --bs-danger: #D95C68;
+            --bs-text: #F7FBFC;
+            --bs-muted: #D3E0E5;
+            --bs-border: rgba(179, 205, 214, 0.24);
+            --bs-button-text: #061115;
         }
 
         .stApp {
             background:
-                radial-gradient(circle at top right, rgba(44,140,149,0.11), transparent 24%),
-                linear-gradient(180deg, #0B1820 0%, #0E1D25 100%);
+                radial-gradient(circle at top right, rgba(0, 199, 183, 0.10), transparent 26%),
+                radial-gradient(circle at left center, rgba(0, 153, 229, 0.08), transparent 22%),
+                linear-gradient(180deg, #08161C 0%, #0D1F26 100%);
             color: var(--bs-text);
         }
 
@@ -34,11 +35,11 @@ def apply_theme() -> None:
         }
 
         [data-testid="stHeader"] {
-            background: rgba(11, 24, 32, 0.78);
+            background: rgba(8, 22, 28, 0.78);
         }
 
         [data-testid="stSidebar"] {
-            background: linear-gradient(180deg, #102029 0%, #12232B 100%);
+            background: linear-gradient(180deg, #0E2027 0%, #112730 100%);
             border-right: 1px solid var(--bs-border);
         }
 
@@ -69,6 +70,7 @@ def apply_theme() -> None:
         .stText,
         div[data-testid="stMarkdownContainer"] p {
             color: var(--bs-muted);
+            opacity: 0.98;
         }
 
         strong,
@@ -96,7 +98,7 @@ def apply_theme() -> None:
             gap: 0.8rem;
             padding: 0.85rem 0.9rem;
             border: 1px solid var(--bs-border);
-            background: rgba(24, 50, 61, 0.82);
+            background: rgba(22, 49, 59, 0.82);
             border-radius: 14px;
             margin-bottom: 0.65rem;
         }
@@ -125,11 +127,11 @@ def apply_theme() -> None:
             border: 1px solid var(--bs-border);
             font-size: 0.78rem;
             font-weight: 600;
-            background: rgba(24, 50, 61, 0.62);
+            background: rgba(22, 49, 59, 0.62);
         }
 
         .bs-pill.ok {
-            color: #E5F1D6;
+            color: #DDF7E8;
         }
 
         .bs-pill.muted {
@@ -137,7 +139,7 @@ def apply_theme() -> None:
         }
 
         [data-testid="stMetric"] {
-            background: linear-gradient(180deg, rgba(24,50,61,0.92), rgba(19,38,47,0.92));
+            background: linear-gradient(180deg, rgba(22, 49, 59, 0.94), rgba(16, 36, 44, 0.96));
             border: 1px solid var(--bs-border);
             border-radius: 16px;
             padding: 0.75rem 0.85rem;
@@ -167,14 +169,14 @@ def apply_theme() -> None:
         div[data-testid="stButton"] > button,
         div[data-testid="stDownloadButton"] > button,
         button[kind="primary"] {
-            background: linear-gradient(180deg, #D9A24F 0%, #C98933 100%) !important;
-            color: #081218 !important;
-            -webkit-text-fill-color: #081218 !important;
-            border: 1px solid rgba(255, 225, 170, 0.28) !important;
+            background: linear-gradient(180deg, #D6A23D 0%, #BE8D2E 100%) !important;
+            color: var(--bs-button-text) !important;
+            -webkit-text-fill-color: var(--bs-button-text) !important;
+            border: 1px solid rgba(255, 226, 163, 0.30) !important;
             border-radius: 12px !important;
             font-weight: 800 !important;
             text-shadow: none !important;
-            box-shadow: 0 6px 18px rgba(201, 137, 51, 0.24) !important;
+            box-shadow: 0 6px 18px rgba(190, 141, 46, 0.24) !important;
         }
 
         .stButton > button *,
@@ -182,10 +184,10 @@ def apply_theme() -> None:
         div[data-testid="stButton"] > button *,
         div[data-testid="stDownloadButton"] > button *,
         button[kind="primary"] * {
-            color: #081218 !important;
-            fill: #081218 !important;
-            stroke: #081218 !important;
-            -webkit-text-fill-color: #081218 !important;
+            color: var(--bs-button-text) !important;
+            fill: var(--bs-button-text) !important;
+            stroke: var(--bs-button-text) !important;
+            -webkit-text-fill-color: var(--bs-button-text) !important;
             opacity: 1 !important;
             text-shadow: none !important;
         }
@@ -195,10 +197,10 @@ def apply_theme() -> None:
         div[data-testid="stButton"] > button:hover,
         div[data-testid="stDownloadButton"] > button:hover,
         button[kind="primary"]:hover {
-            background: linear-gradient(180deg, #E3AE5C 0%, #D39340 100%) !important;
-            color: #081218 !important;
-            -webkit-text-fill-color: #081218 !important;
-            box-shadow: 0 8px 22px rgba(211, 147, 64, 0.30) !important;
+            background: linear-gradient(180deg, #E0AD4A 0%, #C69331 100%) !important;
+            color: var(--bs-button-text) !important;
+            -webkit-text-fill-color: var(--bs-button-text) !important;
+            box-shadow: 0 8px 22px rgba(198, 147, 49, 0.30) !important;
             transform: translateY(-1px);
         }
 
@@ -210,8 +212,8 @@ def apply_theme() -> None:
         div[data-testid="stButton"] > button:active,
         button[kind="primary"]:focus,
         button[kind="primary"]:active {
-            color: #081218 !important;
-            -webkit-text-fill-color: #081218 !important;
+            color: var(--bs-button-text) !important;
+            -webkit-text-fill-color: var(--bs-button-text) !important;
             outline: none !important;
         }
 
@@ -220,152 +222,10 @@ def apply_theme() -> None:
         .stTextInput > div > div > input,
         .stNumberInput input,
         .stTextArea textarea {
-            background: rgba(24, 50, 61, 0.82);
+            background: rgba(22, 49, 59, 0.82);
             color: var(--bs-text);
             border: 1px solid var(--bs-border);
             border-radius: 12px;
         }
 
-        .stSelectbox label,
-        .stMultiSelect label,
-        .stTextInput label,
-        .stNumberInput label,
-        .stTextArea label,
-        .stSlider label,
-        .stRadio label,
-        .stCheckbox label,
-        .stToggle label {
-            color: var(--bs-text) !important;
-        }
-
-        .stSlider [data-baseweb="slider"] > div > div {
-            background: var(--bs-primary);
-        }
-
-        .stSlider [data-baseweb="slider"] [role="slider"] {
-            background: #F7FAFB !important;
-            border: 2px solid var(--bs-primary) !important;
-            box-shadow: 0 0 0 3px rgba(44, 140, 149, 0.18);
-        }
-
-        .stSlider [data-baseweb="slider"] [data-testid="stTickBarMin"],
-        .stSlider [data-baseweb="slider"] [data-testid="stTickBarMax"],
-        .stSlider [data-baseweb="slider"] div[aria-hidden="true"] {
-            color: var(--bs-text) !important;
-            opacity: 0.95 !important;
-        }
-
-        .stSlider p {
-            color: var(--bs-text) !important;
-        }
-
-        [data-testid="stToggle"] label {
-            color: var(--bs-text) !important;
-            font-weight: 600;
-        }
-
-        [data-testid="stToggle"] [data-baseweb="checkbox"] > div {
-            background-color: rgba(195, 208, 213, 0.26) !important;
-            border: 1px solid rgba(195, 208, 213, 0.34) !important;
-        }
-
-        [data-testid="stToggle"] input:checked + div,
-        [data-testid="stToggle"] [aria-checked="true"] {
-            background-color: var(--bs-warning) !important;
-            border-color: rgba(255, 225, 170, 0.28) !important;
-        }
-
-        [data-testid="stToggle"] [data-baseweb="checkbox"] div div {
-            background: #0A1419 !important;
-        }
-
-        /* Spinner y overlays más discretos */
-        [data-testid="stSpinner"] {
-            border-radius: 14px;
-            border: 1px solid var(--bs-border);
-            background: rgba(24, 50, 61, 0.90) !important;
-            color: var(--bs-text) !important;
-        }
-
-        .stSpinner > div {
-            background: transparent !important;
-        }
-
-        /* Evita el lavado visual del chart durante reruns */
-        .stPlotlyChart,
-        .stPlotlyChart > div,
-        .stPlotlyChart iframe,
-        .js-plotly-plot,
-        .plot-container,
-        .plotly,
-        .main-svg {
-            opacity: 1 !important;
-            filter: none !important;
-        }
-
-        .stPlotlyChart {
-            background: linear-gradient(180deg, rgba(28,58,70,0.94), rgba(20,40,49,0.94));
-            border: 1px solid var(--bs-border);
-            border-radius: 18px;
-            padding: 0.4rem 0.4rem 0.1rem 0.4rem;
-            position: relative;
-            isolation: isolate;
-        }
-
-        .stPlotlyChart::before,
-        .stPlotlyChart::after {
-            display: none !important;
-            content: none !important;
-        }
-
-        div[data-testid="stEmpty"] {
-            background: transparent !important;
-        }
-
-        [data-testid="stAlert"] {
-            border-radius: 14px;
-            border: 1px solid var(--bs-border);
-            background: rgba(24, 50, 61, 0.78);
-        }
-
-        [data-testid="stDataFrame"] {
-            border: 1px solid var(--bs-border);
-            border-radius: 14px;
-            overflow: hidden;
-        }
-
-        hr {
-            border-color: var(--bs-border);
-        }
-
-                /* Evitar opacidad durante el Auto-Pilot (stale state de Streamlit) */
-        [data-testid="stStaleNode"],
-        [data-stale="true"],
-        .st-emotion-cache-1cvow4s {
-            opacity: 1 !important;
-            transition: none !important;
-            filter: none !important;
-        }
-
-        /* Refuerzo extra para que Plotly no se vea lavado durante el rerun */
-        .stPlotlyChart,
-        .stPlotlyChart > div,
-        .js-plotly-plot,
-        .plot-container,
-        .plotly,
-        .main-svg {
-            opacity: 1 !important;
-            filter: none !important;
-            transition: none !important;
-        }
-
-        /* Leyenda y texto SVG del gráfico siempre claros */
-        .stPlotlyChart text,
-        .stPlotlyChart tspan {
-            fill: #F4F8FA !important;
-            color: #F4F8FA !important;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
+        
